@@ -32,19 +32,40 @@ struct Proposal: Decodable {
     }
     
     init(id: Int, link: String) {
-        self.id                 = id
-        self.link               = link
-        self.title              = ""
-        self.status             = Status(version: nil, state: .accepted, start: nil, end: nil)
-        self.summary            = nil
-        self.authors            = nil
-        self.warnings           = nil
-        self.reviewManager      = nil
-        self.sha                = nil
-        self.bugs               = nil
-        self.implementations    = nil
+        self.init(
+            id: id,
+            title: "",
+            status: Status(version: nil, state: .accepted, start: nil, end: nil),
+            link: link
+        )
     }
-    
+
+    init(
+        id: Int,
+        title: String,
+        status: Status,
+        summary: String? = nil,
+        authors: [Person]? = nil,
+        warnings: [Warning]? = nil,
+        link: String? = nil,
+        reviewManager: Person? = nil,
+        sha: String? = nil,
+        bugs: [Bug]? = nil,
+        implementations: [Implementation]? = nil
+    ) {
+        self.id = id
+        self.title = title
+        self.status = status
+        self.summary = summary
+        self.authors = authors
+        self.warnings = warnings
+        self.link = link
+        self.reviewManager = reviewManager
+        self.sha = sha
+        self.bugs = bugs
+        self.implementations = implementations
+    }
+
 }
 
 extension Proposal {

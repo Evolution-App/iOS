@@ -62,6 +62,11 @@
 		915265821E67D7A900C2AFDA /* ProposalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915265801E67D7A900C2AFDA /* ProposalTableViewCell.swift */; };
 		915265831E67D7A900C2AFDA /* ProposalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 915265811E67D7A900C2AFDA /* ProposalTableViewCell.xib */; };
 		9152658A1E67E01800C2AFDA /* ListProposalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915265891E67E01800C2AFDA /* ListProposalsViewController.swift */; };
+		E7F10001A1B2C3D4E5F60002 /* ProposalListFiltering.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F10001A1B2C3D4E5F60001 /* ProposalListFiltering.swift */; };
+		E7F10001A1B2C3D4E5F60004 /* ProposalPeopleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F10001A1B2C3D4E5F60003 /* ProposalPeopleBuilder.swift */; };
+		E7F10001A1B2C3D4E5F60006 /* ProposalListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F10001A1B2C3D4E5F60005 /* ProposalListViewModel.swift */; };
+		E7F10001A1B2C3D4E5F60008 /* ProposalsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F10001A1B2C3D4E5F60007 /* ProposalsCoordinator.swift */; };
+		E7F10001A1B2C3D4E5F6000A /* ProposalListFilteringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F10001A1B2C3D4E5F60009 /* ProposalListFilteringTests.swift */; };
 		9152658D1E67E12800C2AFDA /* BorderedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9152658C1E67E12800C2AFDA /* BorderedLabel.swift */; };
 		9152658F1E67E74700C2AFDA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9152658E1E67E74700C2AFDA /* UIColor.swift */; };
 		915A883120A4C97200184F6E /* Section+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915A883020A4C97200184F6E /* Section+Extension.swift */; };
@@ -188,6 +193,11 @@
 		915265801E67D7A900C2AFDA /* ProposalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProposalTableViewCell.swift; sourceTree = "<group>"; };
 		915265811E67D7A900C2AFDA /* ProposalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProposalTableViewCell.xib; sourceTree = "<group>"; };
 		915265891E67E01800C2AFDA /* ListProposalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListProposalsViewController.swift; sourceTree = "<group>"; };
+		E7F10001A1B2C3D4E5F60001 /* ProposalListFiltering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposalListFiltering.swift; sourceTree = "<group>"; };
+		E7F10001A1B2C3D4E5F60003 /* ProposalPeopleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposalPeopleBuilder.swift; sourceTree = "<group>"; };
+		E7F10001A1B2C3D4E5F60005 /* ProposalListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposalListViewModel.swift; sourceTree = "<group>"; };
+		E7F10001A1B2C3D4E5F60007 /* ProposalsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposalsCoordinator.swift; sourceTree = "<group>"; };
+		E7F10001A1B2C3D4E5F60009 /* ProposalListFilteringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposalListFilteringTests.swift; sourceTree = "<group>"; };
 		9152658C1E67E12800C2AFDA /* BorderedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedLabel.swift; sourceTree = "<group>"; };
 		9152658E1E67E74700C2AFDA /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		915A883020A4C97200184F6E /* Section+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Section+Extension.swift"; sourceTree = "<group>"; };
@@ -550,6 +560,10 @@
 			children = (
 				915265881E67D87E00C2AFDA /* uitableviewcell */,
 				915265891E67E01800C2AFDA /* ListProposalsViewController.swift */,
+				E7F10001A1B2C3D4E5F60001 /* ProposalListFiltering.swift */,
+				E7F10001A1B2C3D4E5F60005 /* ProposalListViewModel.swift */,
+				E7F10001A1B2C3D4E5F60003 /* ProposalPeopleBuilder.swift */,
+				E7F10001A1B2C3D4E5F60007 /* ProposalsCoordinator.swift */,
 			);
 			path = list;
 			sourceTree = "<group>";
@@ -759,6 +773,7 @@
 			isa = PBXGroup;
 			children = (
 				A2B7B61B2046F6F20022FA74 /* ProposalDetailViewControllerTests.swift */,
+				E7F10001A1B2C3D4E5F60009 /* ProposalListFilteringTests.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -998,6 +1013,10 @@
 				912938D31E766EE000D2B2CF /* Sequence.swift in Sources */,
 				670F30E01E8667E800A58FB1 /* ProposalListHeaderTableViewCell.swift in Sources */,
 				9152658A1E67E01800C2AFDA /* ListProposalsViewController.swift in Sources */,
+				E7F10001A1B2C3D4E5F60002 /* ProposalListFiltering.swift in Sources */,
+				E7F10001A1B2C3D4E5F60004 /* ProposalPeopleBuilder.swift in Sources */,
+				E7F10001A1B2C3D4E5F60006 /* ProposalListViewModel.swift in Sources */,
+				E7F10001A1B2C3D4E5F60008 /* ProposalsCoordinator.swift in Sources */,
 				91485DED1E6902A2008C4715 /* StatusLabel.swift in Sources */,
 				91B2460B1E99BC4100904DE3 /* Routes.swift in Sources */,
 				91356A38203E656C00E5C625 /* URL.swift in Sources */,
@@ -1050,6 +1069,7 @@
 			files = (
 				9152653B1E67659A00C2AFDA /* swift_evolutionTests.swift in Sources */,
 				A2B7B61C2046F6F20022FA74 /* ProposalDetailViewControllerTests.swift in Sources */,
+				E7F10001A1B2C3D4E5F6000A /* ProposalListFilteringTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
